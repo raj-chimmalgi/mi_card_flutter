@@ -11,73 +11,87 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         appBar: AppBar(
-          title: Text('Boxes'),
+          title: Text('Mi Card'),
         ),
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
             children: [
-              Container(
-                width: 100,
-                color: Colors.red,
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('images/profile.jpeg'),
+              ),
+              Text(
+                'John Doe',
+                style: TextStyle(
+                    fontSize: 40,
+                    fontFamily: 'Pacifico',
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                    fontFamily: 'SourceSans3-VariableFont_wght',
+                    fontSize: 20,
+                    letterSpacing: 2.5,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.teal.shade200),
               ),
               Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                padding: EdgeInsets.all(10),
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: Row(
                   children: [
-                    Container(
-                      width: 100,
-                      height: 100,
-                      color: Colors.yellow,
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal,
                     ),
-                    Container(
-                      height: 100,
-                      width: 100,
-                      color: Colors.lightGreen,
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      '+1 223 432 3434',
+                      style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'SourceSans3',
+                        letterSpacing: 2,
+                        fontSize: 20,
+                      ),
                     )
                   ],
                 ),
               ),
               Container(
-                width: 100,
-                color: Colors.yellow,
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                color: Colors.white,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                      size: 20,
+                    ),
+                    SizedBox(width: 10),
+                    Text(
+                      'raj@yagoo.com',
+                      style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: 'SourceSans3',
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 2,
+                        fontSize: 20,
+                      ),
+                    )
+                  ],
+                ),
               )
             ],
           ),
         ),
       ),
     );
-    // return MaterialApp(
-    //   home: Scaffold(
-    //     appBar: AppBar(title: Text('asdf')),
-    //     backgroundColor: Colors.teal,
-    //     body: SafeArea(
-    //       child: Row(
-    //         crossAxisAlignment: CrossAxisAlignment.stretch,
-    //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    //         children: [
-    //           Container(
-    //             height: 100,
-    //             width: 100,
-    //             color: Colors.tealAccent,
-    //             child: Text('Container 1'),
-    //           ),
-    //           Container(
-    //             height: 100,
-    //             width: 100,
-    //             color: Colors.red,
-    //             child: Text('container 2'),
-    //           ),
-    //           Container(
-    //             height: 100,
-    //             width: 100,
-    //             color: Colors.tealAccent,
-    //             child: Text('asdfjhgkj'),
-    //           )
-    //         ],
-    //       ),
-    //     ),
-    //   ),
-    // );
   }
 }
