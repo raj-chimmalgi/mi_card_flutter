@@ -10,11 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        appBar: AppBar(
-          title: Text('Mi Card'),
-        ),
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50,
@@ -37,20 +35,22 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.teal.shade200),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
-                color: Colors.white,
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: [
-                    Icon(
+                child: Card(
+                  child: ListTile(
+                    leading: Icon(
                       Icons.phone,
                       color: Colors.teal,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
+                    title: Text(
                       '+1 223 432 3434',
                       style: TextStyle(
                         color: Colors.teal.shade900,
@@ -59,33 +59,28 @@ class MyApp extends StatelessWidget {
                         letterSpacing: 2,
                         fontSize: 20,
                       ),
-                    )
-                  ],
+                    ),
+                  ),
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
-                      size: 20,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                    size: 20,
+                  ),
+                  title: Text(
+                    'john@johndoes.com',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      letterSpacing: 2,
+                      fontFamily: 'SourceSans3',
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
                     ),
-                    SizedBox(width: 10),
-                    Text(
-                      'raj@yagoo.com',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'SourceSans3',
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 2,
-                        fontSize: 20,
-                      ),
-                    )
-                  ],
+                  ),
                 ),
               )
             ],
